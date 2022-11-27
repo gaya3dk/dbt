@@ -1,0 +1,17 @@
+
+version: 2
+
+models:
+  - name: client_by_account_status
+    description: "Aggregate clients by status"
+    config:
+      schema: "transformed"
+      materialized: "view"
+
+  - name: value_volume
+    description: "Aggregate number and amount of payments by month and payee id"
+    config:
+      schema: "transformed"
+      materialized: "view"
+    tests:
+      - not_empty

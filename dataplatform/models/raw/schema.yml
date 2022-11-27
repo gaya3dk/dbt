@@ -1,0 +1,14 @@
+
+version: 2
+
+models:
+  - name: client
+    description: "Raw data of client as extracted into the data lake"
+    config:
+      schema: "raw"
+      materialized: "table"
+  - name: payment
+    description: "Raw data of payments between clients"
+    config:
+      schema: "raw"
+      materialized: "table"
