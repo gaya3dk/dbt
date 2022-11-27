@@ -1,10 +1,13 @@
-Welcome to your new dbt project!
+Welcome to dbt project!
 
-### Using the starter project
+### Requirements
+Python 3.8
+Databricks workspace
+Airflow 2.4.3
+### Create new data models on databricks
 
-Try running the following commands:
-- dbt run
-- dbt test
+- make run
+- make test
 
 
 ### Resources:
