@@ -1,9 +1,9 @@
 Welcome to dbt project!
 
 ### Requirements
-Python 3.8
-Databricks workspace
-Airflow 2.4.3
+- Python 3.8
+- Databricks workspace
+- Airflow 2.4.3
 ### Create new data models on databricks
 
 - make run
