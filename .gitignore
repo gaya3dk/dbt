@@ -1,0 +1,4 @@
+.dbt/profiles.yml
+venv
+dataplatform/target
+dataplatform/logs
