@@ -1,6 +1,4 @@
-
 version: 2
-
 models:
   - name: client_by_account_status
     description: "Aggregate clients by status"
@@ -9,9 +7,17 @@ models:
     config:
       schema: "transformed"
       materialized: "view"
-
+    columns:
+      - name: "account_status"
+        description: "Account status ACTIVE/INACTIVE"
+        tests:
+         - accepted_values:
+              values: ['active', 'inactive']
+      - name: "clients_by_status"
+        description: "Number of clients by account status" 
+  
   - name: value_volume
-    description: "Aggregate number and amount of payments by month and payee id"
+    description: "Aggregate number and amount of payments by month per payee id"
     meta:
       owner: "reporting team"
     config:
