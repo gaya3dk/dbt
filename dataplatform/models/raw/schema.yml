@@ -4,11 +4,49 @@ version: 2
 models:
   - name: client
     description: "Raw data of client as extracted into the data lake"
+    meta:
+      owner: "gaya"
     config:
       schema: "raw"
       materialized: "table"
+    columns:
+      - name: client_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+      - name: first_name
+        description: "First name"
+        tests:
+          - not_null
+      - name: last_name
+        description: "Last name"
+        tests:
+          - not_null
+      - name: country
+        description: "Country name"
+        tests:
+          - not_null    
+      - name: account_status
+        description: "active/inactive"
+        tests:
+          - not_null 
+  
   - name: payment
     description: "Raw data of payments between clients"
+    meta:
+      owner: "gaya"
     config:
       schema: "raw"
       materialized: "table"
+    columns:
+      - name: payment_id
+        description: "Unique payment id"
+        tests:
+          - unique
+      - name: payment_status
+        description: "ACCEPTED/REJECTED/NO STATUS"
+      - name: amount
+        description: "Payment amount in Local Currency"
+        tests:
+          - not_null
+      
