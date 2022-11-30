@@ -1,0 +1,11 @@
+
+version: 2
+
+models:
+  - name: payment_method
+    description: "Sum by payment method"
+    meta:
+      owner: "gaya"
+    config:
+      schema: "datamart"
+      materialized: "view"
