@@ -2,6 +2,7 @@
 PROJECT_DIR=dataplatform
 PROFILES_DIR=.dbt
 TARGET=dev 
+SELECTOR=dataplatform
 
 .PHONY: all
 all: install configure compile run test
@@ -29,11 +30,11 @@ docs:
 
 .PHONY: run
 run: 
-	dbt run --project-dir $(PROJECT_DIR) --profiles-dir $(PROFILES_DIR) --target $(TARGET) 
+	dbt run --project-dir $(PROJECT_DIR) --profiles-dir $(PROFILES_DIR) --select $(SELECTOR) --target $(TARGET) 
 
 .PHONY: test
 test:
-	dbt test --project-dir $(PROJECT_DIR) --profiles-dir $(PROFILES_DIR) --target $(TARGET)
+	dbt test --project-dir $(PROJECT_DIR) --profiles-dir $(PROFILES_DIR) --select $(SELECTOR) --target $(TARGET)
 
 .PHONY: clean
 clean:
