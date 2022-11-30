@@ -4,3 +4,4 @@ dataplatform/target
 dataplatform/logs
 logs
 notes
+airflow/dags/__pycache__/
